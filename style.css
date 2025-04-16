@@ -60,10 +60,10 @@ input {
   .logo {
     display: block;
     margin: 0 auto 20px;
-    width: 300px;
+    width: 200px;
 
     animation: heartbeat 1.5s infinite;
-    border-radius: 20px;
+    border-radius: 16px;
 }
 
 @keyframes heartbeat {
