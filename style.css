@@ -1,0 +1,58 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #7a00cc; /* violet background */
+    color: #ffff66; /* peppy yellow font */
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+background-color: transparent;
+padding: 30px;
+max-width: 600px;
+margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #ffff66;
+  }
+
+button {
+    background-color: #ffff66;
+    color: #7a00cc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+  }
+
+input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #ffff66;
+    background-color: transparent;
+    color: #ffff66;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 16px;
+  }
