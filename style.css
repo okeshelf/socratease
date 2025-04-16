@@ -60,7 +60,7 @@ input {
   .logo {
     display: block;
     margin: 0 auto 20px;
-    width: 200px;
+    width: 150px;
 
     animation: heartbeat 1.5s infinite;
     border-radius: 16px;
