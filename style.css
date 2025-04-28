@@ -58,17 +58,28 @@ input {
     }
   }
 
+  #loading-heart, #loading-heart2, #loading-heart3 {
+    display: none;  /* Hide the hearts initially */
+}
+
 #feedback {
     margin-top: 20px;
     font-size: 16px;
   }
 
-  .logo {
-    width: 400px; /* adjust this if you want bigger or smaller */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    width: 400px;
     max-width: 90%;
     margin: 30px 0;
     display: block;
-  }
+}
 
 @keyframes heartbeat {
     0%, 100% {

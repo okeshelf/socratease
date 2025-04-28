@@ -6,24 +6,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="logo-container">
     <img src="logo.png" alt="Socratease Logo" class="logo">
+  </div>
 
-    <div id="riddle-box">
-      <button id="getRiddleBtn" onclick="getRiddle()">Get Riddle</button>
-      <p id="riddle" class="loading">
-        Fetching today's riddle
-        <span class="hearts" style="animation-delay: 0s;">❤️</span>
-        <span class="hearts" style="animation-delay: 0.2s;">❤️</span>
-        <span class="hearts" style="animation-delay: 0.4s;">❤️</span>
-      </p>
+  <div id="riddle-box">
+    <button id="getRiddleBtn" onclick="getRiddle()">Get Riddle</button>
 
-      <input type="text" id="answerInput" placeholder="Your guess...">
-      <button id="submitBtn" onclick="checkAnswer()">Submit Guess</button>
+    <!-- The hearts are inside the riddle paragraph, hidden initially -->
+    <p id="riddle" class="loading">
+      Fetching today's riddle
+      <span id="loading-heart" class="hearts" style="display: none;">❤️</span>
+      <span id="loading-heart2" class="hearts" style="display: none;">❤️</span>
+      <span id="loading-heart3" class="hearts" style="display: none;">❤️</span>
+    </p>
 
-      <p id="feedback"></p>
-      <button id="revealBtn" onclick="revealAnswer()">Reveal Answer</button>
-    </div>
+    <input type="text" id="answerInput" placeholder="Your guess...">
+    <button id="submitBtn" onclick="checkAnswer()">Submit Guess</button>
+
+    <p id="feedback"></p>
+    <button id="revealBtn" onclick="revealAnswer()">Reveal Answer</button>
   </div>
 
   <script src="script.js"></script>

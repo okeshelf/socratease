@@ -10,12 +10,25 @@ fetch ('socratease_data.json')
   });
 
   function getRiddle() {
-    const index = new Date().getDate() % riddles.length;
-    currentRiddle = riddles[index];
+    // Show hearts while the riddle is being fetched
+    document.getElementById("loading-heart").style.display = "inline-block";  // Show the first heart
+    document.getElementById("loading-heart2").style.display = "inline-block"; // Show the second heart
+    document.getElementById("loading-heart3").style.display = "inline-block"; // Show the third heart
+    document.getElementById("riddle").style.display = "none";  // Hide riddle initially
+    document.getElementById("feedback").textContent = "";  // Clear feedback
+    guessCount = 0;  // Reset guesses
 
-    document.getElementById("riddle").textContent = currentRiddle.riddle;
-    document.getElementById("feedback").textContent = "";
-    guessCount = 0;
+    // Fetch a new riddle after a short delay (simulate loading time)
+    setTimeout(() => {
+        const index = new Date().getDate() % riddles.length;
+        currentRiddle = riddles[index];
+
+        document.getElementById("riddle").textContent = currentRiddle.riddle;
+        document.getElementById("riddle").style.display = "block";  // Show the riddle
+        document.getElementById("loading-heart").style.display = "none";  // Hide hearts after riddle is shown
+        document.getElementById("loading-heart2").style.display = "none"; 
+        document.getElementById("loading-heart3").style.display = "none"; 
+    }, 2000);  // Simulate a 2-second loading time (you can adjust this)
 }
 
 function checkAnswer() {
