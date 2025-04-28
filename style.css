@@ -1,6 +1,6 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: #6A0DAD; /* purple background */
+    background-color: #45138c; /* purple background */
     color: #ffff66; /* peppy yellow font */
     text-align: center;
     padding: 50px;
@@ -12,7 +12,7 @@ padding: 20px;
 
 button {
     background-color: #ffff66;
-    color: #6A0DAD;
+    color: #45138c;
     padding: 10px 20px;
     border: none;
     border-radius: 12px;
