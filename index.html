@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Socratease💋</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <img src="logo2.png" alt="Socratease Logo" class="logo">
-            
-            <h1> Socratease💋</h1> 
-            <h2> where clever meets coy </h2>
-            
-            <button onclick="getRiddle()" >Get Riddle</button>
-            <p id="riddle"></p>
-            
-            <input type="text" id="answerInput" placeholder="Your guess...">
-            <button onclick="checkAnswer()" >Submit Guess</button>
-            
-            <p id="feedback"></p>
-            <button onclick="revealAnswer()" >Reveal Answer</button>
-        </div>
+<head>
+  <title>Socratease 💋</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <img src="logo2.png" alt="Socratease Logo" class="logo">
 
-        <script src="script.js"></script>
-    </body>
+    <h1>Socratease 💋</h1>
+    <h2 class="subtitle">where clever meets coy ;)</h2>
+
+    <div id="riddle-box">
+      <button id="getRiddleBtn" onclick="getRiddle()">Get Riddle</button>
+      <p id="riddle"></p>
+
+      <input type="text" id="answerInput" placeholder="Your guess...">
+      <button id="submitBtn" onclick="checkAnswer()">Submit Guess</button>
+
+      <p id="feedback"></p>
+      <button id="revealBtn" onclick="revealAnswer()">Reveal Answer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

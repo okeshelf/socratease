@@ -1,26 +1,20 @@
-const riddles = [
-    {
-        question: "I speak without a mouth and hear without ears. What am I?"
-        , answer: "echo",
-        flirtyResponses: [
-            "Nope, try again smartie 😘"
-            , "Close... but not quite! You're still my favourite mind 😘"
-            , "Ooh, I like how you think... but not the answer 😘"
-        ],
-        successMessage: "Correct! You're echoing straight into my heart 💕"
-    }
-
-];
-
+let riddles = [];
 let currentRiddle;
 let guessCount = 0;
 
-function getRiddle() {
-    const today = new Date().getDate() % riddles.length;
-    currentRiddle = riddles[today];
-    document.getElementById("riddle").textContent = currentRiddle.question;
+fetch ('socratease_data.json')
+.then(response => response.json())
+  .then(data => {
+    riddles = data;
+  });
+
+  function getRiddle() {
+    const index = new Date().getDate() % riddles.length;
+    currentRiddle = riddles[index];
+
+    document.getElementById("riddle").textContent = currentRiddle.riddle;
     document.getElementById("feedback").textContent = "";
-    guessCount = 0;  
+    guessCount = 0;
 }
 
 function checkAnswer() {
@@ -28,13 +22,13 @@ function checkAnswer() {
     if (!currentRiddle) return;
 
     if (input === currentRiddle.answer.toLowerCase()) {
-        document.getElementById("feedback").textContent = currentRiddle.successMessage;
+        document.getElementById("feedback").textContent = currentRiddle.feedback_right;
     } else {
         guessCount++;
         if (guessCount < 3) {
-            document.getElementById("feedback").textContent = currentRiddle.flirtyResponses[guessCount - 1];
+            document.getElementById("feedback").textContent = "Not quite, but you're still cute 💕 Try again!";
         } else {
-            document.getElementById("feedback").textContent = "Out of guesses! Click 'Reveal Answer' 💕"
+            document.getElementById("feedback").textContent = "Out of guesses! Click 'Reveal Answer' 💕";
         }
     }
 }
