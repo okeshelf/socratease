@@ -7,14 +7,16 @@
 </head>
 <body>
   <div class="container">
-    <img src="logo2.png" alt="Socratease Logo" class="logo">
-
-    <h1>Socratease 💋</h1>
-    <h2 class="subtitle">where clever meets coy ;)</h2>
+    <img src="logo.png" alt="Socratease Logo" class="logo">
 
     <div id="riddle-box">
       <button id="getRiddleBtn" onclick="getRiddle()">Get Riddle</button>
-      <p id="riddle"></p>
+      <p id="riddle" class="loading">
+        Fetching today's riddle
+        <span class="hearts" style="animation-delay: 0s;">❤️</span>
+        <span class="hearts" style="animation-delay: 0.2s;">❤️</span>
+        <span class="hearts" style="animation-delay: 0.4s;">❤️</span>
+      </p>
 
       <input type="text" id="answerInput" placeholder="Your guess...">
       <button id="submitBtn" onclick="checkAnswer()">Submit Guess</button>

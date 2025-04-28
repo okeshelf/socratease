@@ -26,10 +26,12 @@ function checkAnswer() {
         document.getElementById("feedback").textContent = currentRiddle.feedback_right;
     } else {
         guessCount++;
-        if (guessCount < 3) {
-            document.getElementById("feedback").textContent = "Not quite, but you're still cute 💕 Try again!";
+        if (guessCount === 1) {
+            document.getElementById("feedback").textContent = "Hmm, not quite right... but I love the way you're thinking! 🤔💘";
+        } else if (guessCount === 2) {
+            document.getElementById("feedback").textContent = "Almost there! If I were a riddle, you’d be the perfect answer 😘🧩";
         } else {
-            document.getElementById("feedback").textContent = "Out of guesses! Click 'Reveal Answer' 💕";
+            document.getElementById("feedback").textContent = "Oops, out of guesses! Click 'Reveal Answer' 💋";
         }
     }
 }

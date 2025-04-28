@@ -1,32 +1,18 @@
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: #7a00cc; /* violet background */
+    background-color: #6A0DAD; /* purple background */
     color: #ffff66; /* peppy yellow font */
     text-align: center;
     padding: 50px;
 }
 
 .container {
-background-color: transparent;
-padding: 30px;
-max-width: 600px;
-margin: auto;
+padding: 20px;
 }
-
-h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  .subtitle {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #ffff66;
-  }
 
 button {
     background-color: #ffff66;
-    color: #7a00cc;
+    color: #6A0DAD;
     padding: 10px 20px;
     border: none;
     border-radius: 12px;
@@ -52,19 +38,37 @@ input {
     text-align: center;
 }
 
+.loading {
+    font-size: 14px;
+    color: #FFF44F;
+    margin-top: 20px;
+  }
+  
+  .hearts {
+    display: inline-block;
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
 #feedback {
     margin-top: 20px;
     font-size: 16px;
   }
 
   .logo {
+    width: 400px; /* adjust this if you want bigger or smaller */
+    max-width: 90%;
+    margin: 30px 0;
     display: block;
-    margin: 0 auto 20px;
-    width: 150px;
-
-    animation: heartbeat 1.5s infinite;
-    border-radius: 16px;
-}
+  }
 
 @keyframes heartbeat {
     0%, 100% {
