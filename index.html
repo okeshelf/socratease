@@ -13,13 +13,7 @@
   <div id="riddle-box">
     <button id="getRiddleBtn" onclick="getRiddle()">Get Riddle</button>
 
-    <!-- The hearts are inside the riddle paragraph, hidden initially -->
-    <p id="riddle" class="loading">
-      Fetching today's riddle
-      <span id="loading-heart" class="hearts" style="display: none;">❤️</span>
-      <span id="loading-heart2" class="hearts" style="display: none;">❤️</span>
-      <span id="loading-heart3" class="hearts" style="display: none;">❤️</span>
-    </p>
+    <p id="riddle" class="loading">Fetching today's riddle...</p>
 
     <input type="text" id="answerInput" placeholder="Your guess...">
     <button id="submitBtn" onclick="checkAnswer()">Submit Guess</button>

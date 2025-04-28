@@ -43,24 +43,6 @@ input {
     color: #FFF44F;
     margin-top: 20px;
   }
-  
-  .hearts {
-    display: inline-block;
-    animation: bounce 1s infinite;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
-
-  #loading-heart, #loading-heart2, #loading-heart3 {
-    display: none;  /* Hide the hearts initially */
-}
 
 #feedback {
     margin-top: 20px;
