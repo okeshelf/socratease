@@ -1,7 +1,7 @@
 body {
     font-family: 'Press Start 2P', cursive;
     background-color: #45138c; /* purple background */
-    color: #ffff66; /* peppy yellow font */
+    color: #ffca39; /* peppy yellow font */
     text-align: center;
     padding: 50px;
 }
@@ -11,7 +11,7 @@ padding: 20px;
 }
 
 button {
-    background-color: #ffff66;
+    background-color: #ffca39;
     color: #45138c;
     padding: 10px 20px;
     border: none;
@@ -29,18 +29,27 @@ button:hover {
 
 input {
     padding: 10px;
-    width: 80%;
+    width: 250px;
     border-radius: 10px;
-    border: 2px solid #ffff66;
+    border: 2px solid #ffca39;
     background-color: transparent;
-    color: #ffff66;
+    color: #ffca39;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+input:focus {
+    outline: none;
+    border-color: #fff44f; /* a lighter, glowing yellow */
+    box-shadow: 0 0 10px #fff44f, 0 0 20px #fff44f;
+    background-color: transparent;
 }
 
 .loading {
     font-size: 14px;
-    color: #FFF44F;
+    color: #ffca39;
     margin-top: 20px;
   }
 
@@ -63,25 +72,3 @@ input {
     display: block;
 }
 
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #ffff66;
-    }
-    14% {
-        transform: scale(1.3);
-        box-shadow: 0 0 25px #ffff66;
-    }
-    28% {
-        transform: scale(1);
-        box-shadow: 0 0 15px #ffff66;
-    }
-    42% {
-        transform: scale(1.3);
-        box-shadow: 0 0 25px #ffff66;
-    }
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #ffff66;
-    }
-}
