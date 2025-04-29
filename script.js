@@ -1,3 +1,5 @@
+const clickSound = new Audio('button_click.wav');
+
 let riddles = [];
 let currentRiddle;
 let guessCount = 0;
@@ -9,6 +11,7 @@ fetch ('socratease_data.json')
   });
 
   function getRiddle() {
+    clickSound.play();
     const index = new Date().getDate() % riddles.length;
     currentRiddle = riddles[index];
 
@@ -20,6 +23,7 @@ fetch ('socratease_data.json')
 }
 
 function checkAnswer() {
+    clickSound.play();
     const input = document.getElementById("answerInput").value.trim().toLowerCase();
     if (!currentRiddle) return;
 
@@ -38,6 +42,7 @@ function checkAnswer() {
 }
 
 function revealAnswer() {
+    clickSound.play();
     if (currentRiddle) {
         document.getElementById("feedback").textContent = `The answer is: ${currentRiddle.answer}. Still love you for trying 💋`;
     }
