@@ -30,28 +30,39 @@ fetch ('socratease_data.json')
 }
 
 function checkAnswer() {
+    const input = document.getElementById("answerInput").value.trim().toLowerCase();
+    if (!currentRiddle) return;
+
+    // Play click sound first
     clickSound.play();
 
-clickSound.onended = () => {
-    if (input === currentRiddle.answer.toLowerCase()) {
-        correctSound.play();
-        document.getElementById("feedback").textContent = currentRiddle.feedback_right;
-    } else {
-        incorrectSound.play();
-        guessCount++;
-        if (guessCount === 1) {
-            document.getElementById("feedback").textContent = "Hmm, not quite right... but I love the way you're thinking! 🤔💘";
-        } else if (guessCount === 2) {
-            document.getElementById("feedback").textContent = "Almost there! If I were a riddle, you’d be the perfect answer 😘🧩";
-        } else {
-            document.getElementById("feedback").textContent = "Oops, out of guesses! Click 'Reveal Answer' 💋";
-        }
-    }
+    // After click sound ends, evaluate answer and play correct/incorrect sound
+    clickSound.onended = () => {
+        let feedback = "";
 
-    // Clean up the event to avoid duplicate triggers
-    clickSound.onended = null;
-};
+        if (input === currentRiddle.answer.toLowerCase()) {
+            correctSound.play();
+            feedback = currentRiddle.feedback_right;
+        } else {
+            guessCount++;
+            incorrectSound.play();
+
+            if (guessCount === 1) {
+                feedback = "Hmm, not quite right... but I love the way you're thinking! 🤔💘";
+            } else if (guessCount === 2) {
+                feedback = "Almost there! If I were a riddle, you’d be the perfect answer 😘🧩";
+            } else {
+                feedback = "Oops, out of guesses! Click 'Reveal Answer' 💋";
+            }
+        }
+
+        document.getElementById("feedback").textContent = feedback;
+
+        // Clear event handler after use to avoid stacking
+        clickSound.onended = null;
+    };
 }
+
 
 function revealAnswer() {
     clickSound.play();
