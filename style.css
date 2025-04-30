@@ -107,3 +107,12 @@ input:focus {
     transform: rotate(-2deg);
   }
   
+  #riddle-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+  }
+  
