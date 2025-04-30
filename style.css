@@ -74,50 +74,41 @@ input:focus {
     display: block;
 }
 
-.photo-frame img {
-    position: absolute;
-    width: 220px;
-    height: auto;
-    z-index: 1;
+.photo-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 120px;
     pointer-events: none;
-}
-
-/* LEFT SIDE IMAGES */
-.photo-frame.left img:nth-child(1) {
-    top: 120px;
-    left: 10px;
+  }
+  
+  .photo-frame.left {
+    left: 20px;
+  }
+  
+  .photo-frame.right {
+    right: 20px;
+  }
+  
+  .photo-frame img {
+    width: 200px;
+    height: auto;
     transform: rotate(-5deg);
-}
-
-.photo-frame.left img:nth-child(2) {
-    top: 320px;
-    left: 25px;
-    transform: rotate(3deg);
-}
-
-.photo-frame.left img:nth-child(3) {
-    top: 520px;
-    left: 5px;
+  }
+  
+  .photo-frame img:nth-child(2) {
+    transform: rotate(4deg);
+  }
+  
+  .photo-frame img:nth-child(3) {
     transform: rotate(-2deg);
-}
-
-/* RIGHT SIDE IMAGES */
-.photo-frame.right img:nth-child(1) {
-    top: 120px;
-    right: 10px;
-    transform: rotate(5deg);
-}
-
-.photo-frame.right img:nth-child(2) {
-    top: 320px;
-    right: 25px;
-    transform: rotate(-4deg);
-}
-
-.photo-frame.right img:nth-child(3) {
-    top: 520px;
-    right: 5px;
-    transform: rotate(2deg);
-}
-
+  }
+  
+  /* Adjust body padding so content doesn't hide behind photos */
+  body {
+    padding-left: 240px;
+    padding-right: 240px;
+    overflow-x: hidden;
+  }
   
