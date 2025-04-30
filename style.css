@@ -78,19 +78,24 @@ input:focus {
   }
   
   .photo-frame.left {
-    left: 0;
+    left: 10px;
     top: 120px;
   }
   
   .photo-frame.right {
-    right: 0;
+    right: 10px;
     top: 120px;
   }
   
   .photo-frame img {
     position: absolute;
-    width: 120px;
+    width: 180px;
     height: auto;
     z-index: 1;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
   }
   
