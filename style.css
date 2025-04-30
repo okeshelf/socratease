@@ -72,3 +72,25 @@ input:focus {
     display: block;
 }
 
+.photo-frame {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .photo-frame.left {
+    left: 0;
+    top: 120px;
+  }
+  
+  .photo-frame.right {
+    right: 0;
+    top: 120px;
+  }
+  
+  .photo-frame img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    z-index: 1;
+  }
+  
