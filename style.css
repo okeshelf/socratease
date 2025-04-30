@@ -6,6 +6,7 @@ body {
     padding: 50px;
     overflow-x: hidden;
     position: relative;
+    margin: 0;
 }
 
 .container {
@@ -77,10 +78,11 @@ input:focus {
 .photo-frame {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    position: fixed;
+    gap: 30px;
+    position: absolute;
     top: 120px;
     pointer-events: none;
+    z-index: 1;
   }
   
   .photo-frame.left {
@@ -103,12 +105,5 @@ input:focus {
   
   .photo-frame img:nth-child(3) {
     transform: rotate(-2deg);
-  }
-  
-  /* Adjust body padding so content doesn't hide behind photos */
-  body {
-    padding-left: 240px;
-    padding-right: 240px;
-    overflow-x: hidden;
   }
   
